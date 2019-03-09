@@ -1,0 +1,20 @@
+{
+  "name": "react-licks",
+  "version": "0.0.1",
+  "description": "My favorite React Licks",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/durangatan/react-licks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/durangatan/react-licks/issues"
+  },
+  "homepage": "https://github.com/durangatan/react-licks#readme"
+}
