@@ -1,7 +1,6 @@
 import React, { ReactNodeArray } from 'react';
 import styled from 'styled-components';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 type DragAndDropFormProps = {
   children: ReactNodeArray;
@@ -20,14 +19,11 @@ export default function DragAndDropForm({ children, onDragEnd }: DragAndDropForm
           {provided => (
             <div ref={provided.innerRef}>
               {children.map((child, index) => {
-                const rand = Math.random();
                 return (
                   <FlexRow key={index}>
                     <Draggable draggableId={String(index)} index={index}>
                       {provided => (
-                        <div ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
-                          <FontAwesomeIcon icon="bars" />
-                        </div>
+                        <div ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps} />
                       )}
                     </Draggable>
                     {child}

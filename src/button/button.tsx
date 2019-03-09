@@ -1,8 +1,49 @@
 import React from 'react';
 import styled from 'styled-components';
 import { darken } from 'polished';
-import { ButtonType, getBackgroundColor, getFontColor } from '../link-button';
 import { Spinner } from '..';
+
+export type ButtonType = 'default' | 'action' | 'success' | 'error';
+
+export const getBackgroundColor = (buttonType: ButtonType, theme: any): string => {
+  switch (buttonType) {
+    case 'default': {
+      return theme.color.gray;
+    }
+    case 'action': {
+      return theme.color.blue;
+    }
+    case 'success': {
+      return theme.color.green;
+    }
+    case 'error': {
+      return theme.color.red;
+    }
+    default: {
+      return theme.color.gray;
+    }
+  }
+};
+
+export const getFontColor = (buttonType: ButtonType, theme: any): string => {
+  switch (buttonType) {
+    case 'default': {
+      return theme.color.black;
+    }
+    case 'action': {
+      return theme.color.white;
+    }
+    case 'success': {
+      return theme.color.white;
+    }
+    case 'error': {
+      return theme.color.white;
+    }
+    default: {
+      return theme.color.black;
+    }
+  }
+};
 
 type ButtonProps = {
   onClick: (e: React.MouseEvent<HTMLElement>) => void;
